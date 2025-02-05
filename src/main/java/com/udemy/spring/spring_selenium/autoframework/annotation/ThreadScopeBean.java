@@ -1,7 +1,6 @@
 package com.udemy.spring.spring_selenium.autoframework.annotation;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 
