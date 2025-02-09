@@ -8,5 +8,4 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Window {
     String value() default "";
-
 }
