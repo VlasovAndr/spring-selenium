@@ -1,6 +1,7 @@
 package com.udemy.spring.spring_selenium.page.flights;
 
 import com.udemy.spring.spring_selenium.autoframework.annotation.Page;
+import com.udemy.spring.spring_selenium.autoframework.annotation.TakeScreenshot;
 import com.udemy.spring.spring_selenium.page.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,7 +20,7 @@ public class FlightPage extends Base {
         this.driver.manage().window().maximize();
     }
 
-//    @TakeScreenshot
+    @TakeScreenshot
     public List<String> getLabels(){
         return this.elements
                 .stream()
