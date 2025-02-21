@@ -4,11 +4,15 @@ import com.udemy.spring.spring_selenium.SpringBaseTestNGTest;
 import com.udemy.spring.spring_selenium.entity.Customer;
 import com.udemy.spring.spring_selenium.page.visa.VisaRegistrationPage;
 import com.udemy.spring.spring_selenium.repository.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class UserVisaTest extends SpringBaseTestNGTest {
+
+    private static final Logger logger = LoggerFactory.getLogger(UserVisaTest.class);
 
     @Autowired
     private UserRepository repository;
@@ -26,7 +30,7 @@ public class UserVisaTest extends SpringBaseTestNGTest {
         this.registrationPage.setComments(u.getComments());
         this.registrationPage.submit();
 
-        System.out.println(this.registrationPage.getConfirmationNumber());
+        logger.info("Request confirmation : " + this.registrationPage.getConfirmationNumber());
     }
 
     @DataProvider
